@@ -2,12 +2,7 @@ import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
 
 import "./Navbar.css"
@@ -45,40 +40,44 @@ export function Navbar() {
                     </Link>
                 ))}
             </nav>
-            
+
             <div className="hidden md:block mr-2">
                 <Button className="bg-orange-500 mr-[50px] font-normal downloadButton font-poppins hover:bg-orange-600 text-white">
                     Download CV
                 </Button>
             </div>
 
-            {/* Mobile Navigation */}
-            <div className="md:hidden mr-2">
-                <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                        <Button variant="ghost">
-                            <Menu className="h-6 w-6" />
-                        </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent className="w-56">
-                        {navLinks.map((link) => (
-                            <DropdownMenuItem key={link.href} asChild>
-                                <Link
-                                    href={link.href}
-                                    className="tracking-[0.03em] font-poppins font-normal"
-                                >
-                                    {link.label}
-                                </Link>
-                            </DropdownMenuItem>
-                        ))}
-                        <DropdownMenuItem asChild>
-                            <Button className="bg-orange-500 font-normal downloadButton font-poppins hover:bg-orange-600 text-white w-full">
-                                Download CV
-                            </Button>
-                        </DropdownMenuItem>
-                    </DropdownMenuContent>
-                </DropdownMenu>
-            </div>
+            {/* Mobile Sidebar Navigation */}
+<div className="md:hidden mr-2">
+  <Sheet>
+    <SheetTrigger asChild>
+      <Button variant="ghost">
+        <Menu className="h-6 w-6" />
+      </Button>
+    </SheetTrigger>
+    <SheetContent side="left" className="p-4">
+      {/* Invisible title for screen readers */}
+      <SheetHeader>
+        <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+      </SheetHeader>
+
+      <nav className="flex flex-col gap-4">
+        {navLinks.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="tracking-[0.03em] font-poppins font-normal"
+          >
+            {link.label}
+          </Link>
+        ))}
+        <button className="w-[188px] h-[52px] bg-[#FD6F00] hover:bg-[#e65c00] text-white font-poppins font-normal">
+          Download CV
+        </button>
+      </nav>
+    </SheetContent>
+  </Sheet>
+</div>
         </header>
     )
 }
