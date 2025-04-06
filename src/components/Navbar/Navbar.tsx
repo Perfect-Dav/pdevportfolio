@@ -48,36 +48,36 @@ export function Navbar() {
             </div>
 
             {/* Mobile Sidebar Navigation */}
-<div className="md:hidden mr-2">
-  <Sheet>
-    <SheetTrigger asChild>
-      <Button variant="ghost">
-        <Menu className="h-6 w-6" />
-      </Button>
-    </SheetTrigger>
-    <SheetContent side="left" className="p-4">
-      {/* Invisible title for screen readers */}
-      <SheetHeader>
-        <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
-      </SheetHeader>
+            <div className="md:hidden mr-2">
+                <Sheet>
+                    <SheetTrigger asChild>
+                        <Button variant="ghost">
+                            <Menu className="h-6 w-6" />
+                        </Button>
+                    </SheetTrigger>
+                    <SheetContent side="left" className="p-4">
+                        {/* Invisible title for screen readers */}
+                        <SheetHeader>
+                            <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+                        </SheetHeader>
 
-      <nav className="flex flex-col gap-4">
-        {navLinks.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className="tracking-[0.03em] font-poppins font-normal"
-          >
-            {link.label}
-          </Link>
-        ))}
-        <button className="w-[188px] h-[52px] bg-[#FD6F00] hover:bg-[#e65c00] text-white font-poppins font-normal">
-          Download CV
-        </button>
-      </nav>
-    </SheetContent>
-  </Sheet>
-</div>
+                        <nav className="flex flex-col gap-4">
+                            {navLinks.map((link) => (
+                                <Link
+                                    key={link.href}
+                                    href={link.href}
+                                    className="tracking-[0.03em] font-poppins font-normal"
+                                >
+                                    {link.label}
+                                </Link>
+                            ))}
+                            <button className="w-[188px] h-[52px] bg-[#FD6F00] hover:bg-[#e65c00] text-white font-poppins font-normal">
+                                Download CV
+                            </button>
+                        </nav>
+                    </SheetContent>
+                </Sheet>
+            </div>
         </header>
     )
 }
