@@ -19,7 +19,7 @@ export function AboutSection() {
       <div className="w-full md:w-1/2 flex justify-center md:justify-start">
         <Avatar className="w-100 h-100">
           <AvatarImage src="/assets/images/about-img.png" alt="Profile Image" />
-          <AvatarFallback>FS</AvatarFallback>
+          <AvatarFallback>AboutImage</AvatarFallback>
         </Avatar>
       </div>
 
