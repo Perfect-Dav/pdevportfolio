@@ -1,5 +1,5 @@
 .hero-text {
-    letter-spacing: 0.03em;
+    letter-spacing: 0.05em;
     font-weight: normal;
 }
 
@@ -10,6 +10,6 @@
 }
 
 .hero-icons {
-    width: 33px;
-    height: 33px;
+    width: 23px;
+    height: 23px;
 }

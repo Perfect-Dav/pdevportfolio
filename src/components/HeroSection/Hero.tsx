@@ -45,10 +45,10 @@ export function Hero() {
             </div>
 
             <div className="w-full md:w-1/2 flex flex-col items-center mt-8 md:mt-0">
-                <Avatar className="w-100 h-120">
+                <Avatar className="w-90 h-100">
                     <AvatarImage src="/assets/images/hero-img.png" alt="Profile Image" />
                 </Avatar>
-                <div className="flex tracking-[0.3em] space-x-4 mt-4">
+                <div className="flex mt-4">
                     {socialLinks.map(({ Icon, href, label }) => (
                         <Button
                             key={label}
@@ -57,7 +57,7 @@ export function Hero() {
                             className="p-2 hover:text-[#FFFFFF]"
                         >
                             <a href={href} aria-label={label}>
-                                <Icon className="hero-icons" size={33} />
+                                <Icon className="hero-icons" size={25} />
                             </a>
                         </Button>
                     ))}
