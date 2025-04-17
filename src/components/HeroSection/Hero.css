@@ -1,0 +1,15 @@
+.hero-text {
+    letter-spacing: 0.03em;
+    font-weight: normal;
+}
+
+.hero-btn {
+    width: 150px;
+    height: 44px;
+    margin-top: 20px;
+}
+
+.hero-icons {
+    width: 33px;
+    height: 33px;
+}
