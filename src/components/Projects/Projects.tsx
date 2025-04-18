@@ -31,6 +31,7 @@ const projects = [
 export function Projects() {
     return (
       <section className="max-w-7xl mx-auto px-6 py-16">
+        {/* Header */}
         <div className="text-center mb-8 space-y-2">
           <h2 className="text-4xl font-bold">My Projects</h2>
           <p className="text-base pt-2 font-light text-gray-600">
@@ -39,24 +40,21 @@ export function Projects() {
         </div>
   
         <Tabs defaultValue="Web Design">
-          <TabsList className="inline-flex mx-auto mb-8 space-x-4 bg-transparent p-0">
-            {categories.map((cat) => (
-              <TabsTrigger
-                key={cat}
-                value={cat}
-                className="
-                  flex-initial
-                  px-4 py-2
-                  rounded-lg
-                  border border-gray-200
-                  bg-white text-gray-800
-                  hover:bg-gray-50
-                  data-[state=active]:bg-orange-500
-                  data-[state=active]:text-white
-                  data-[state=active]:border-transparent
-                  transition
-                "
-              >
+          <TabsList className="flex flex-wrap justify-center gap-4 mb-8 md:hidden bg-transparent">
+            {categories.map(cat => (
+              <TabsTrigger key={cat} value={cat} 
+                className="flex-initial px-4 py-2 rounded-lg border 
+                border-gray-200 bg-white text-gray-800 hover:bg-gray-50 
+                data-[state=active]:bg-orange-500 
+                data-[state=active]:text-white 
+                data-[state=active]:border-transparent transition">
+                {cat}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+          <TabsList className="hidden md:inline-flex mx-auto mb-8 space-x-4 bg-transparent p-0">
+            {categories.map(cat => (
+              <TabsTrigger key={cat} value={cat} className="flex-initial px-4 py-2 rounded-lg border border-gray-200 bg-white text-gray-800 hover:bg-gray-50 data-[state=active]:bg-orange-500 data-[state=active]:text-white data-[state=active]:border-transparent transition">
                 {cat}
               </TabsTrigger>
             ))}
