@@ -85,8 +85,8 @@ export default function TestimonialSection() {
               >
                 <div className="w-full max-w-[800px] mx-auto">
                   <Card className="bg-gray-50 border-none shadow-none rounded-xl p-10">
-                    <div className="flex items-center mb-[-20px]">
-                      <div className="w-28 h-28 relative flex-shrink-0 mr-8">
+                    <div className="flex flex-col md:flex-row items-start md:items-center">
+                      <div className="w-28 h-28 relative flex-shrink-0 mb-4 md:mb-0 md:mr-8">
                         <Image
                           src={t.imageSrc}
                           alt={t.name}
@@ -94,17 +94,17 @@ export default function TestimonialSection() {
                           className="rounded-full object-cover"
                         />
                       </div>
-                      <div className="flex-1">
+                      <div className="flex-1 text-left space-y-4">
                         <p className="text-gray-700 font-light text-lg leading-relaxed">
                           <span className="text-4xl text-orange-500 align-top">“</span>
                           {t.quote}
                           <span className="text-4xl text-orange-500 align-top ml-1">”</span>
                         </p>
+                        <div>
+                          <p className="font-semibold text-gray-900">{t.name}</p>
+                          <p className="text-sm text-gray-500">{t.role}</p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="mt-1 ml-36 text-left">
-                      <p className="font-semibold text-gray-900">{t.name}</p>
-                      <p className="text-sm text-gray-500">{t.role}</p>
                     </div>
                   </Card>
                 </div>
