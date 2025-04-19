@@ -19,13 +19,13 @@ const navLinks = [
 export function Navbar() {
     return (
         <header className="w-full px-4 py-2 flex items-center justify-between relative">
-            <div className="flex items-center ml-2">
+            <div className="flex items-center md:ml-2">
                 <Image
                     src="/assets/images/Logo.svg"
-                    alt="MyBrand Logo"
+                    alt="Logo"
                     width={279}
                     height={67}
-                    className="mr-2 ml-[50px]"
+                    className="mr-2 md:ml-[50px]"
                 />
             </div>
 
