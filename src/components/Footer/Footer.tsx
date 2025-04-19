@@ -29,7 +29,7 @@ export default function Footer() {
         <div className="flex flex-col items-center space-y-6">
           <div className="flex items-center space-x-2">
             <Image
-              src="/assets/images/logo.svg"
+              src="/assets/images/Logo.svg"
               alt="FawziUiUx Logo"
               width={64}
               height={64}
