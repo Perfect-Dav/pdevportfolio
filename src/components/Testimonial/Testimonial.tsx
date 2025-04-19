@@ -9,6 +9,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel"
+import type { EmblaCarouselType } from 'embla-carousel'
 
 const testimonials = [
   {
@@ -46,14 +47,14 @@ export default function TestimonialSection() {
     Autoplay({ delay: 4000, stopOnInteraction: false })
   )
   const [selected, setSelected] = React.useState(0)
-  const emblaApiRef = React.useRef<any>(null)
+  const emblaApiRef = React.useRef<EmblaCarouselType | undefined>(undefined)
 
   return (
     <section className="max-w-7xl mx-auto px-6 py-16">
       <div className="text-center mb-8">
         <h2 className="text-4xl font-bold">Testimonials</h2>
-        <p className="mt-2 text-gray-600 font-light">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus <br/>
-         netus in. Aliquet donec morbi convallis pretium</p>
+        <p className="mt-2 text-gray-600 font-light">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus <br />
+          netus in. Aliquet donec morbi convallis pretium</p>
       </div>
 
       <Carousel
@@ -61,7 +62,7 @@ export default function TestimonialSection() {
         opts={{ align: "center", loop: true }}
         onMouseEnter={autoplay.current.stop}
         onMouseLeave={autoplay.current.reset}
-        setApi={(api) => {
+        setApi={(api: EmblaCarouselType | undefined) => {
           if (!api) return
           emblaApiRef.current = api
           api.on("select", () => setSelected(api.selectedScrollSnap()))
@@ -118,9 +119,8 @@ export default function TestimonialSection() {
           <button
             key={i}
             onClick={() => emblaApiRef.current?.scrollTo(i)}
-            className={`w-8 h-2 rounded-full transition ${
-              i === selected ? "bg-orange-500" : "bg-gray-300"
-            }`}
+            className={`w-8 h-2 rounded-full transition ${i === selected ? "bg-orange-500" : "bg-gray-300"
+              }`}
           />
         ))}
       </div>

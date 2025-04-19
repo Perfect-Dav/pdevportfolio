@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Image from "next/image"
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 
 import "./Services.css"
 
