@@ -2,47 +2,47 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { IoLogoFacebook } from "react-icons/io5"
+//import { IoLogoFacebook } from "react-icons/io5"
 import { FaTwitter, FaLinkedin } from "react-icons/fa"
-import { FiInstagram } from "react-icons/fi"
+//import { FiInstagram } from "react-icons/fi"
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
-  { label: "About Me", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Projects", href: "/projects" },
-  { label: "Testimonials", href: "/testimonials" },
-  { label: "Contact", href: "/contact" },
+  { label: "About Me", href: "#about" },
+  { label: "Services", href: "$services" },
+  { label: "Projects", href: "#projects" },
+  { label: "Testimonials", href: "#testimonials" },
+  { label: "Contact", href: "#contact" },
 ]
 
 const SOCIAL_LINKS = [
-  { href: "https://facebook.com/", Icon: IoLogoFacebook },
-  { href: "https://twitter.com/", Icon: FaTwitter },
-  { href: "https://instagram.com/", Icon: FiInstagram },
-  { href: "https://linkedin.com/", Icon: FaLinkedin },
+  //{ href: "https://facebook.com/", Icon: IoLogoFacebook },
+  { href: "https://x.com/perfect_adewale", Icon: FaTwitter },
+  //{ href: "https://instagram.com/", Icon: FiInstagram },
+  { href: "https://linkedin.com/#", Icon: FaLinkedin },
 ]
 
 export default function Footer() {
   return (
     <footer>
-      <div className="bg-gray-50 py-8 px-6">
+      <div className="bg-[#0c1121] py-8 px-6">
         <div className="flex flex-col items-center space-y-6">
           <div className="flex items-center space-x-2">
             <Image
-              src="/assets/images/Logo.svg"
-              alt="FawziUiUx Logo"
+              src="/assets/images/image.png"
+              alt="PdevTech Logo"
               width={64}
               height={64}
-              className="w-[250px] h-[150px]"
+              className="w-[100px] h-[100px]"
             />
           </div>
 
-          <ul className="flex flex-wrap justify-center mb-15 space-x-8 text-black-700">
+          <ul className="flex flex-wrap justify-center mb-15 space-x-8 text-white">
             {NAV_LINKS.map((link) => (
               <li className="footer-links pr-[30px] tracking-[0.03em] font-poppins" key={link.href}>
                 <Link
                   href={link.href}
-                  className="hover:text-gray-900 transition"
+                  className="hover:text-gray-300 transition"
                 >
                   {link.label}
                 </Link>
@@ -59,7 +59,7 @@ export default function Footer() {
                 aria-label={href}
               >
                 <div className="w-10 h-10 rounded-full flex items-center justify-center">
-                  <Icon className="w-5 h-5 text-black" />
+                  <Icon className="w-5 h-5 text-white" />
                 </div>
               </Link>
             ))}
@@ -67,13 +67,13 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="bg-[#545454] py-4">
-        <p className="text-center text-sm text-gray-200">
-          © 2023{" "}
-          <span className="text-orange-500 font-semibold">
-            FawziUiUx
+      <div className="bg-[#0c1121] py-4 border-t border-gray-700">
+        <p className="text-center text-sm text-gray-300">
+          © 2025{" "}
+          <span className="text-white font-semibold">
+            PdevTech
           </span>{" "}
-          All Rights Reserved , Inc.
+          All Rights Reserved.
         </p>
       </div>
     </footer>

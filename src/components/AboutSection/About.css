@@ -1,22 +1,24 @@
-
 .about-slider [data-slot="slider-track"] {
-    background-color: #EDECEC !important;
-    height: 10px;        
-    border-radius: 9999px;   
-    overflow: visible; 
-  }
-  
+  background-color: #1f2639 !important; /* darker shade for contrast */
+  height: 10px;
+  border-radius: 9999px;
+  overflow: visible;
+  transition: background-color 0.3s ease;
+}
+
 .about-slider [data-slot="slider-range"] {
-    background-color: #fd6f00 !important;
-    height: 10px;
-    border-radius: 9999px;
-  }
-  
+  background-color: #fd6f00 !important; /* vibrant highlight */
+  height: 10px;
+  border-radius: 9999px;
+  transition: width 0.5s ease;
+}
+
 .about-slider [data-slot="slider-thumb"] {
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-    border: 2px solid #fd6f00;
-    border-radius: 9999px;
-    box-shadow: none;
+  width: 16px;
+  height: 16px;
+  background-color: #fd6f00;
+  border: 2px solid #fff;
+  border-radius: 9999px;
+  box-shadow: 0 0 6px rgba(253, 111, 0, 0.5); /* soft glow */
+  transition: transform 0.3s ease;
 }

@@ -30,11 +30,11 @@ const projects = [
 
 export function Projects() {
     return (
-      <section className="max-w-7xl mx-auto px-6 py-16">
+      <section id="projects" className="max-w-7xl mx-auto px-6 py-16">
         {/* Header */}
         <div className="text-center mb-8 space-y-2">
-          <h2 className="text-4xl font-bold">My Projects</h2>
-          <p className="text-base pt-2 font-light text-gray-600">
+          <h2 className="text-4xl text-white font-bold">My Projects</h2>
+          <p className="text-base pt-2 font-light text-white">
           Lorem ipsum dolor sit amet consectetur. Mollis erat duis aliquam mauris est risus lectus. <br /> Phasellus consequat urna tellus
           </p>
         </div>

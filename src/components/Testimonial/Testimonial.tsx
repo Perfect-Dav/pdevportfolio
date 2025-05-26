@@ -14,30 +14,30 @@ import type { EmblaCarouselType } from 'embla-carousel'
 const testimonials = [
   {
     quote:
-      "Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum.",
-    name: "John Doe",
-    role: "CEO",
+      "Working with PdevTech was the best decision for our startup. Their team understood our vision and delivered a responsive website that brought real results.",
+    name: "Sarah Ahmed",
+    role: "Founder, LaunchSphere",
     imageSrc: "/assets/images/testimonials/image1.png",
   },
   {
     quote:
-      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-    name: "Jane Smith",
-    role: "CTO",
+      "From design to launch, PdevTech was flawless. Their creativity and technical skills helped our e-commerce brand shine in a competitive market.",
+    name: "Michael Ofori",
+    role: "CEO, StyleCartel",
     imageSrc: "/assets/images/testimonials/image2.png",
   },
   {
     quote:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    name: "Alice Johnson",
-    role: "Product Manager",
+      "We needed a reliable web dev partner, and PdevTech came through. They built a user-friendly dashboard and offered continuous support throughout.",
+    name: "Tosin Balogun",
+    role: "Operations Lead, TaskPro",
     imageSrc: "/assets/images/testimonials/image1.png",
   },
   {
     quote:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    name: "Alice Johnson",
-    role: "Product Manager",
+      "The landing page PdevTech created for us was clean, fast, and effective. We saw a jump in conversion rates almost immediately.",
+    name: "Linda Mba",
+    role: "Marketing Director, NovaPay",
     imageSrc: "/assets/images/testimonials/image2.png",
   }
 ]
@@ -50,11 +50,13 @@ export default function TestimonialSection() {
   const emblaApiRef = React.useRef<EmblaCarouselType | undefined>(undefined)
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-16">
+    <section id="testimonials" className="max-w-7xl mx-auto px-6 py-16">
       <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold">Testimonials</h2>
-        <p className="mt-2 text-gray-600 font-light">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus <br />
-          netus in. Aliquet donec morbi convallis pretium</p>
+        <h2 className="text-4xl text-white font-bold">Testimonials</h2>
+        <p className="mt-2 text-white font-light">
+          Hear from our satisfied clients who’ve partnered with PdevTech to bring their digital visions to life.
+          From startups to established brands, we deliver web solutions that make an impact.
+        </p>
       </div>
 
       <Carousel

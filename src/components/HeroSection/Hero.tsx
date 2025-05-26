@@ -1,4 +1,6 @@
+"use client"
 import * as React from "react"
+import { useTypewriter, Cursor } from 'react-simple-typewriter'
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarImage } from "@/components/ui/avatar"
 import { IoLogoFacebook } from "react-icons/io5"
@@ -7,40 +9,56 @@ import { FiInstagram } from "react-icons/fi"
 
 import "./Hero.css"
 
-// Hero title lines
-const titleLines = [
-    { text: "UI & UX", className: "block" },
-    { text: "Designer", className: "block md:inline-block md:ml-25" },
-] as const
-
 // Social icons
 const socialLinks = [
-    { Icon: IoLogoFacebook, href: "#", label: "Facebook" },
-    { Icon: FaTwitter, href: "#", label: "Twitter" },
-    { Icon: FiInstagram, href: "#", label: "Instagram" },
+    //{ Icon: IoLogoFacebook, href: "#", label: "Facebook" },
+    { Icon: FaTwitter, href: "https://x.com/perfect_adewale", label: "Twitter" },
+    //{ Icon: FiInstagram, href: "#", label: "Instagram" },
     { Icon: FaLinkedin, href: "#", label: "LinkedIn" },
 ] as const
 
 export function Hero() {
+    const [text] = useTypewriter({
+      words: [
+        'Welcome to PdevTech',
+        'Your Web Development Experts',
+        'Where Design Meets Innovation',
+        'Building Intuitive Interfaces',
+        'Transforming Ideas into Engaging Experiences',
+      ],
+      loop: false,
+      typeSpeed: 70,
+      deleteSpeed: 50,
+      delaySpeed: 1500,
+    })
+
+    const fullText = "At PdevTech, we craft bespoke websites that engage your audience and drive growth. From responsive design to seamless functionality, every project is tailored to bring your vision to life.";
+    const [typedText, setTypedText] = React.useState("");
+
+    React.useEffect(() => {
+      let index = 0;
+      const interval = setInterval(() => {
+        setTypedText((prev: string) => prev + fullText[index]);
+        index += 1;
+        if (index >= fullText.length) clearInterval(interval);
+      }, 50);
+      return () => clearInterval(interval);
+    }, []);
+
     return (
-        <section className="px-6 py-16 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
+        <section className="px-6 py-16 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-white">
             <div className="w-full md:w-1/2 text-center md:text-left space-y-4">
-                <p className="text-lg font-poppins font-semibold">Hi I am</p>
-                <h2 className="text-3xl md:text-4xl font-poppins font-normal text-[#FD6F00]">
-                    Fawzi Sayed
-                </h2>
-                <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                    {titleLines.map(({ text, className }) => (
-                        <span key={text} className={className}>
-                            {text}
-                        </span>
-                    ))}
-                </h1>
-                <p className="max-w-md text-base leading-relaxed hero-text">
-                    Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra.
+                <div className="space-y-4">
+                  <h2 className="text-3xl md:text-4xl font-poppins font-normal">
+                    {text}
+                    <Cursor cursorStyle="|" />
+                  </h2>
+                </div>
+                <p className="max-w-md text-base leading-relaxed">
+                  {typedText}
                 </p>
-                <Button className="hero-btn w-[150px] h-[50px] bg-[#FD6F00] hover:bg-[#e65c00] text-white font-poppins font-normal">
-                    Hire Me
+                <Button className="hero-btn w-[150px] h-[50px] bg-white text-gray-900 hover:bg-gray-100 font-poppins font-normal">
+                    <a href="#contact">Contact Us</a>
                 </Button>
             </div>
 

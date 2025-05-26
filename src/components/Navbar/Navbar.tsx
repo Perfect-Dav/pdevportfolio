@@ -9,22 +9,22 @@ import "./Navbar.css"
 
 const navLinks = [
     { label: "Home", href: "/" },
-    { label: "About Me", href: "/about" },
-    { label: "Services", href: "/services" },
-    { label: "Projects", href: "/projects" },
-    { label: "Testimonials", href: "/testimonials" },
-    { label: "Contact", href: "/contact" },
-];
+    { label: "About Me", href: "#about" },
+    { label: "Services", href: "#services" },
+    { label: "Projects", href: "#projects" },
+    { label: "Testimonials", href: "#testimonials" },
+    { label: "Contact", href: "#contact" },
+]
 
 export function Navbar() {
     return (
-        <header className="w-full px-4 py-2 flex items-center justify-between relative">
+        <header className="w-full px-4 py-2 flex items-center justify-between relative bg-[#0c1121]">
             <div className="flex items-center md:ml-2">
                 <Image
-                    src="/assets/images/Logo.svg"
+                    src="/assets/images/image.png"
                     alt="Logo"
-                    width={279}
-                    height={67}
+                    width={80}
+                    height={80}
                     className="mr-2 md:ml-[50px]"
                 />
             </div>
@@ -34,7 +34,7 @@ export function Navbar() {
                     <Link
                         key={link.href}
                         href={link.href}
-                        className="tracking-[0.03em] font-poppins font-normal"
+                        className="text-white tracking-[0.03em] font-poppins font-normal hover:text-gray-300"
                     >
                         {link.label}
                     </Link>
@@ -42,8 +42,8 @@ export function Navbar() {
             </nav>
 
             <div className="hidden md:block mr-2">
-                <Button className="bg-orange-500 mr-[50px] font-normal downloadButton font-poppins hover:bg-orange-600 text-white">
-                    Download CV
+                <Button className="bg-white mr-[50px] font-normal downloadButton font-poppins hover:bg-gray-100 text-black">
+                    <a href="#contact">Contact Us</a>
                 </Button>
             </div>
 
@@ -71,7 +71,7 @@ export function Navbar() {
                                     {link.label}
                                 </Link>
                             ))}
-                            <button className="w-[188px] h-[52px] bg-[#FD6F00] hover:bg-[#e65c00] text-white font-poppins font-normal">
+                            <button className="w-[188px] h-[52px] bg-white hover:bg-gray-100 text-black font-poppins font-normal">
                                 Download CV
                             </button>
                         </nav>
