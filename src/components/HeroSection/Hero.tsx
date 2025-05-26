@@ -3,17 +3,13 @@ import * as React from "react"
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarImage } from "@/components/ui/avatar"
-import { IoLogoFacebook } from "react-icons/io5"
 import { FaTwitter, FaLinkedin } from "react-icons/fa"
-import { FiInstagram } from "react-icons/fi"
 
 import "./Hero.css"
 
 // Social icons
 const socialLinks = [
-    //{ Icon: IoLogoFacebook, href: "#", label: "Facebook" },
     { Icon: FaTwitter, href: "https://x.com/perfect_adewale", label: "Twitter" },
-    //{ Icon: FiInstagram, href: "#", label: "Instagram" },
     { Icon: FaLinkedin, href: "#", label: "LinkedIn" },
 ] as const
 

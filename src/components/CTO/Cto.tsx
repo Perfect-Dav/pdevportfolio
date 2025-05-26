@@ -39,7 +39,7 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="max-w-7xl mx-auto px-6 py-16 text-center">
-      <h2 className="text-4xl text-white font-bold mb-4">Let's Design Together</h2>
+      <h2 className="text-4xl text-white font-bold mb-4">Let's Work Together</h2>
       <p className="text-base text-white mb-8">
         Ready to bring your digital ideas to life? At PdevTech, we collaborate with you to design and build modern, responsive, and impactful websites that align perfectly with your vision and goals.
       </p>
